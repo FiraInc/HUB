@@ -52,6 +52,7 @@ public class SleepStatistics extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sleep_statistics);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        //ss
 
         calculateTime();
     }
