@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/music_background"/>
+
+    <ImageView
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/navigationbar"/>
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/topBar"
+        android:layout_alignBottom="@id/topBar"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/chevron_pointing_left"/>
+
+
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/topBar"
+        android:layout_alignBottom="@id/topBar"
+        android:gravity="center"
+        android:layout_toRightOf="@id/backButton"
+        android:layout_marginLeft="10dp"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:text="@string/workout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/RowTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/topFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/Center1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/Center1"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:text="@string/workout_playlist"/>
+
+                    <TextView
+                        android:id="@+id/UnderTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Center1"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/musicTextColor"
+                        android:text="@string/playlists_for_workout"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/firstRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/topFirst"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/beast_mode"
+                        android:onClick="Link1"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/motivation_mix"
+                        android:onClick="Link2"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/dance_workout"
+                        android:onClick="Link3"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/secondRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/firstRow"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/hype"
+                        android:onClick="Link4"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/power_workout"
+                        android:onClick="Link5"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/workout_remix"
+                        android:onClick="Link6"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/thirdRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/secondRow"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/cardio"
+                        android:onClick="Link7"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/electro_workout"
+                        android:onClick="Link8"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/wild_free"
+                        android:onClick="Link9"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

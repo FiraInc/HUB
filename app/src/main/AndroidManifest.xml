@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fira.hub">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Utility.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="com.fira.hub.Music.MusicHome">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+            </intent-filter>
+
+        </activity>
+
+
+        <activity android:name="com.fira.hub.Music.MusicApps"/>
+        <activity android:name="com.fira.hub.Music.Genres"/>
+
+
+
+
+        <activity android:name="com.fira.hub.Music.GenreSleep"/>
+        <activity android:name="com.fira.hub.Music.GenreFocus"/>
+        <activity android:name="com.fira.hub.Music.GenrePop"/>
+
+
+
+
+        <activity android:name="com.fira.hub.Food.FoodStartupActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.SEND"/>
+        </intent-filter>
+        </activity>
+
+        <activity android:name="com.fira.hub.Food.FoodMonday"/>
+        <activity android:name="com.fira.hub.Music.GenreMood"/>
+        <activity android:name=".Music.GenreParty"/>
+        <activity android:name=".Music.GenreChill"/>
+        <activity android:name=".Music.GenreRomance"/>
+        <activity android:name=".Music.GenreWorkout"/>
+        <activity android:name=".Music.GenreGaming"/>
+
+
+        <activity android:name="com.fira.hub.Night.NightMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Night.NightSleeping"/>
+
+        <activity android:name=".Night.SleepStatistics">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+            </intent-filter>
+        </activity>
+
+
+
+    </application>
+
+</manifest>

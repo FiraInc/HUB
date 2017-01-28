@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Utility</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="popular_music_apps">Popular music apps</string>
+    <string name="apps_made_for_music">Apps made for music</string>
+    <string name="popular_playlists">Popular playlists</string>
+    <string name="sleep_playlists">Sleep playlists</string>
+    <string name="playlists_for_sleep">Playlists for sleep</string>
+    <string name="popular_genres">Popular genres</string>
+    <string name="genres">Genres</string>
+    <string name="genresBig">GENRES</string>
+    <string name="focus">FOCUS</string>
+    <string name="focus_playlists">Focus Playlists</string>
+    <string name="playlists_for_better_focusing">Playlists for better focusing</string>
+    <string name="good_morning">Good morning</string>
+
+</resources>

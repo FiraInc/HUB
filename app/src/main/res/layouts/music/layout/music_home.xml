@@ -1,0 +1,338 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fira.hub.Music.MusicHome">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/music_background"/>
+
+    <ImageView
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/navigationbar"/>
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/topBar"
+        android:layout_alignBottom="@id/topBar"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/chevron_pointing_left"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/topBar"
+        android:layout_alignBottom="@id/topBar"
+        android:gravity="center"
+        android:layout_toRightOf="@id/backButton"
+        android:layout_marginLeft="10dp"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:text="HOME" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/topBar"
+        android:layout_alignBottom="@id/topBar"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/shazam_logo"/>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/topImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/shazam_header"/>
+
+
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/firstRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/topImage">
+
+                <RelativeLayout
+                    android:id="@+id/topFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/Center1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/popularText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/Center1"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:text="@string/popular_music_apps"/>
+
+                    <TextView
+                        android:id="@+id/popularTextDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Center1"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/musicTextColor"
+                        android:text="@string/apps_made_for_music"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/more_button"
+                        android:onClick="PopularMusicApps"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottomFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/topFirst"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/firstApp"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/spotify_with_title"
+                        android:onClick="spotifyButton"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/secondApp"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/soundcloud_with_title"
+                        android:onClick="soundcloudButton"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/thirdApp"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/play_music_with_title"
+                        android:onClick="playmusicButton"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/secondRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/firstRow">
+
+                <RelativeLayout
+                    android:id="@+id/topSecond"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/Center2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/PopularPlaylistsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/Center2"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:text="@string/sleep_playlists"/>
+
+                    <TextView
+                        android:id="@+id/popularPlaylistsTextDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Center2"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/musicTextColor"
+                        android:text="@string/playlists_for_sleep"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:onClick="sleepGenre"
+                        android:src="@drawable/more_button"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottomSecond"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/topSecond"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/SecondFirstApp"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/tuck_me_in"
+                        android:onClick="tuckMeIn"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/SecondSecondApp"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/peaceful_piano"
+                        android:onClick="peacefulPiano"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/SecondThirdApp"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/late_night_drinks"
+                        android:onClick="lateNightDrinks"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/thirdRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secondRow"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/topThird"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/Center3"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/PopularGenresText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/Center3"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:text="@string/popular_genres"/>
+
+                    <TextView
+                        android:id="@+id/popularGenresTextDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Center3"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/musicTextColor"
+                        android:text="@string/genres"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/more_button"
+                        android:onClick="Genres"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottomThird"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/topThird"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ThirdFirstApp"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pop_genre"
+                        android:onClick="popGenre"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/ThirdSecondApp"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/mood_genre"
+                        android:onClick="moodGenre"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/ThirdThirdApp"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/focus_genre"
+                        android:onClick="focusGenre"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

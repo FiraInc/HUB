@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_sleeping"/>
+
+    <ImageView
+        android:id="@+id/yellow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/yellowActionBar" />
+
+    <ImageView
+        android:id="@+id/centerNightSleeping"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="1dp"
+        android:layout_height="1dp" />
+
+    <TextView
+        android:id="@+id/goodNightTextSleeping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/centerNightSleeping"
+        android:textSize="40sp"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="30dp"
+        android:text="@string/good_night"/>
+
+    <ImageView
+        android:id="@+id/buttonWakeUp"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/centerNightSleeping"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_transparent"
+        android:onClick="wakeUpButton"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/buttonWakeUp"
+        android:layout_alignLeft="@id/buttonWakeUp"
+        android:layout_alignRight="@id/buttonWakeUp"
+        android:layout_alignTop="@id/buttonWakeUp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:text="@string/wake_up"
+        android:onClick="wakeUpButton"/>
+
+</RelativeLayout>
