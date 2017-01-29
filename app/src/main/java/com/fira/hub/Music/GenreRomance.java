@@ -73,4 +73,8 @@ public class GenreRomance extends Activity {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(thirdAlbum));
         startActivity(browserIntent);
     }
+
+    public void backpressed(View view) {
+        super.onBackPressed();
+    }
 }

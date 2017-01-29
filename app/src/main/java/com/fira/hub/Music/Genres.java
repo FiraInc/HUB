@@ -61,4 +61,8 @@ public class Genres extends Activity {
         Intent intent = new Intent(this, GenreGaming.class);
         startActivity(intent);
     }
+
+    public void backpressed(View view) {
+        super.onBackPressed();
+    }
 }

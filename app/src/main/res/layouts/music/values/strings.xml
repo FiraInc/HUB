@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="pop">POP</string>
-    <string name="pop_playlists">Pop Playlists</string>
-    <string name="playlists_for_pop_lovers">Playlists for pop lovers</string>
-    <string name="mood">Mood</string>
-    <string name="mood_playlists">Mood playlists</string>
-    <string name="playlists_that_fits_your_mood">Playlists that fits your mood</string>
-    <string name="party">Party</string>
-    <string name="party_playlists">Party Playlists</string>
-    <string name="playlists_for_your_party">Playlists for your party</string>
-    <string name="chill">CHILL</string>
-    <string name="chill_playlists">Chill Playlists</string>
-    <string name="playlists_for_chilling">Playlists for chilling</string>
-    <string name="workout">WORKOUT</string>
-    <string name="workout_playlist">Workout Playlists</string>
-    <string name="playlists_for_workout">Playlists for workout</string>
-    <string name="romance">ROMANCE</string>
-    <string name="romance_playlists">Romance Playlists</string>
-    <string name="playlists_for_making_love">Playlists for making love</string>
-    <string name="gaming">GAMING</string>
-    <string name="gaming_playlists">Gaming Playlists</string>
-    <string name="playlists_for_gaming">Playlists for gaming</string>
-    <string name="go_to_sleep">Go to sleep</string>
-    <string name="good_night">Good night</string>
-    <string name="wake_up">Wake Up</string>
-    <string name="tonight_you_slept_for">Tonight, you slept for</string>
-    <string name="hours">Hours</string>
-    <string name="minutes">Minutes</string>
+
+    <string name="its_friday">It\'s friday</string>
+    <string name="party_and_chill">Party playlists and chill playlists</string>
+    <string name="its_saturday">It\'s saturday</string>
 </resources>

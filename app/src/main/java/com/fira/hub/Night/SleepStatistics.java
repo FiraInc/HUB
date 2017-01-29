@@ -52,7 +52,18 @@ public class SleepStatistics extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sleep_statistics);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        //ss
+
+        try{
+            File fileDay = new File(Environment.getExternalStorageDirectory(),tempFolder + "NightSleepOn.txt");
+            fileDay.delete();
+            BufferedWriter writerDay = new BufferedWriter(new FileWriter(fileDay,true));
+            writerDay.write("0");
+            writerDay.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Failed to start timer", Toast.LENGTH_LONG).show();
+        }
 
         calculateTime();
     }

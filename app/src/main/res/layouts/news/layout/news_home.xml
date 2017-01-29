@@ -97,7 +97,7 @@
                         android:layout_marginLeft="10dp"
                         android:textSize="20sp"
                         android:textColor="@android:color/white"
-                        android:text="@string/popular_music_apps"/>
+                        android:text="Your newspapers"/>
 
                     <TextView
                         android:id="@+id/popularTextDescription"
@@ -107,7 +107,7 @@
                         android:layout_marginLeft="10dp"
                         android:textSize="15sp"
                         android:textColor="@color/musicTextColor"
-                        android:text="@string/apps_made_for_music"/>
+                        android:text="Saved newspapers"/>
 
                     <ImageView
                         android:layout_width="wrap_content"

@@ -48,7 +48,6 @@
         </intent-filter>
         </activity>
 
-        <activity android:name="com.fira.hub.Food.FoodMonday"/>
         <activity android:name="com.fira.hub.Music.GenreMood"/>
         <activity android:name=".Music.GenreParty"/>
         <activity android:name=".Music.GenreChill"/>
@@ -70,6 +69,16 @@
                 <action android:name="android.intent.action.SEND"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".News.NewsLauncher">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".News.NewsHome"/>
+
+        <activity android:name=".News.NewsHomeExperimental"/>
 
 
 

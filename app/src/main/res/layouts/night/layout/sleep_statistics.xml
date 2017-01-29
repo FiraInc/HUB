@@ -15,7 +15,6 @@
         android:layout_height="50dp"
         android:background="@color/yellowActionBar" />
 
-
     <TextView
         android:id="@+id/centerStatistics"
         android:layout_centerVertical="true"

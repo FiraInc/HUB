@@ -97,4 +97,8 @@ public class MusicApps extends Activity {
             Toast.makeText(this, "Please install Amazon Music", Toast.LENGTH_LONG).show();
         }
     }
+
+    public void backpressed(View view) {
+        super.onBackPressed();
+    }
 }

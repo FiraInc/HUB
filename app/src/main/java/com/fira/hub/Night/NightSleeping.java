@@ -104,6 +104,18 @@ public class NightSleeping extends Activity {
             e.printStackTrace();
             Toast.makeText(this, "Failed to start timer", Toast.LENGTH_LONG).show();
         }
+
+        try{
+            File fileDay = new File(Environment.getExternalStorageDirectory(),tempFolder + "NightSleepOn.txt");
+            fileDay.delete();
+            BufferedWriter writerDay = new BufferedWriter(new FileWriter(fileDay,true));
+            writerDay.write("1");
+            writerDay.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Failed to start timer", Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override
@@ -135,7 +147,6 @@ public class NightSleeping extends Activity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Log.e("fail", "damn hard");
                         fadeIn();
                     }
                 }, 10000);
