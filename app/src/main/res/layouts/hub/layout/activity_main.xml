@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fira.hub.HUB.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/hub_background"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/hub_logo"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/firstRow"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/settings_button_hub"
+                android:onClick="Settings"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/connections_button_hub"
+                android:onClick="Connections"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/information_button_hub"
+                android:onClick="Information"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:text="@string/report_bug"
+        android:onClick="reportBug"
+        />
+
+
+</RelativeLayout>

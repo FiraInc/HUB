@@ -1,9 +1,12 @@
 package com.fira.hub.Music;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
@@ -11,8 +14,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.fira.hub.HUB.Upgrade;
+import com.fira.hub.Install.InstallWelcome;
 import com.fira.hub.R;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Calendar;
 
 public class MusicHome extends Activity {
@@ -29,13 +38,46 @@ public class MusicHome extends Activity {
     ImageView SecondAlbum;
     ImageView ThirdAlbum;
 
+    boolean isInstalled;
+
     String whatToLaunch = "";
+
+    File file;
+    StringBuilder text;
+
+    String tempFolder = "Fira/HUB/temp/";
+    String personalInformationFolder = "Fira/HUB/PersonalInformation/";
+    String favoriteAppsGeneral = "Fira/HUB/FavoriteApps/General/";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.music_home);
+
+        file = new File(Environment.getExternalStorageDirectory(),tempFolder + "Installed.txt");
+        text = new StringBuilder();
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+            String line;
+
+            while ((line = bufferedReader.readLine()) != null) {
+                text.append(line);
+            }
+            bufferedReader.close();
+        }
+        catch (IOException e) {
+
+        }
+
+        if (!text.toString().equals("1")) {
+            Intent intent = new Intent(this, InstallWelcome.class);
+            startActivity(intent);
+            finish();
+        }
+        text.setLength(0);
+
+
 
         PopularPlaylistsText = (TextView) findViewById(R.id.PopularPlaylistsText);
         popularPlaylistsTextDescription = (TextView) findViewById(R.id.popularPlaylistsTextDescription);
@@ -44,6 +86,7 @@ public class MusicHome extends Activity {
         FirstAlbum = (ImageView) findViewById(R.id.SecondFirstApp);
         SecondAlbum = (ImageView) findViewById(R.id.SecondSecondApp);
         ThirdAlbum = (ImageView) findViewById(R.id.SecondThirdApp);
+        checkPro();
         loadTime();
 
 
@@ -373,7 +416,73 @@ public class MusicHome extends Activity {
     }
 
     public void moodGenre(View view) {
-        Intent intent =new Intent(this, GenreMood.class);
+        if (isInstalled) {
+            Intent intent = new Intent(this, GenreMood.class);
+            startActivity(intent);
+        }else {
+            Intent intent = new Intent(this, Upgrade.class);
+            startActivity(intent);
+        }
+    }
+
+    public void shazamButton(View view) {
+        Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.shazam.android");
+        if (launchIntent != null) {
+            startActivity(launchIntent);
+        }else {
+            Toast.makeText(this, "Please install Shazam", Toast.LENGTH_LONG).show();
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.shazam.android"));
+            startActivity(browserIntent);
+        }
+    }
+
+
+
+    private void checkPro() {
+        Context context = this;
+        PackageManager pm = context.getPackageManager();
+        isInstalled = isPackageInstalled("com.fira.firavip", pm);
+
+        if (isInstalled) {
+            ImageView moodGenre = (ImageView) findViewById(R.id.ThirdSecondApp);
+            moodGenre.setImageDrawable(getResources().getDrawable(R.drawable.mood_genre_normal));
+        }
+
+    }
+
+    private boolean isPackageInstalled(String packagename, PackageManager packageManager) {
+        try {
+            packageManager.getPackageInfo(packagename, PackageManager.GET_ACTIVITIES);
+            return true;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
+
+    public void CurrentGenreMore (View view) {
+        if (whatToLaunch.equals("sleep")) {
+            Intent intent = new Intent(this, GenreSleep.class);
+            startActivity(intent);
+        }else if (whatToLaunch.equals("party")) {
+            Intent intent = new Intent(this, GenreParty.class);
+            startActivity(intent);
+        }else if (whatToLaunch.equals("pop")) {
+            Intent intent = new Intent(this, GenrePop.class);
+            startActivity(intent);
+        }else if (whatToLaunch.equals("morning")) {
+            Intent intent = new Intent(this, GenreChill.class);
+            startActivity(intent);
+        }else if (whatToLaunch.equals("focus")) {
+            Intent intent = new Intent(this, GenreFocus.class);
+            startActivity(intent);
+        }else if (whatToLaunch.equals("chill")) {
+            Intent intent = new Intent(this, GenreChill.class);
+            startActivity(intent);
+        }
+    }
+
+    public void upgrade(View view) {
+        Intent intent = new Intent(this, Upgrade.class);
         startActivity(intent);
     }
 }

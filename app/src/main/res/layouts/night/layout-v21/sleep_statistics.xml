@@ -94,5 +94,27 @@
         android:textColor="@android:color/white"
         android:text="@string/minutes"/>
 
+    <ImageView
+        android:id="@+id/doneButtonSleepStatistics"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/green_round_button"
+        android:onClick="Done"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/doneButtonSleepStatistics"
+        android:layout_alignRight="@id/doneButtonSleepStatistics"
+        android:layout_alignBottom="@id/doneButtonSleepStatistics"
+        android:layout_alignTop="@id/doneButtonSleepStatistics"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:text="Done"
+        android:onClick="Done"/>
+
 
 </RelativeLayout>

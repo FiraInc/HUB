@@ -3,6 +3,7 @@ package com.fira.hub.Food;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.util.Log;
 import android.webkit.WebChromeClient;
@@ -10,8 +11,13 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
+import com.fira.hub.Install.InstallWelcome;
 import com.fira.hub.R;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Calendar;
 
 /**
@@ -33,10 +39,39 @@ public class FoodStartupActivity extends Activity {
 
     Boolean doubleExit = false;
 
+    File file;
+    StringBuilder text;
+
+    String tempFolder = "Fira/HUB/temp/";
+    String personalInformationFolder = "Fira/HUB/PersonalInformation/";
+    String favoriteAppsGeneral = "Fira/HUB/FavoriteApps/General/";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.food_startup);
+
+        file = new File(Environment.getExternalStorageDirectory(),tempFolder + "Installed.txt");
+        text = new StringBuilder();
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+            String line;
+
+            while ((line = bufferedReader.readLine()) != null) {
+                text.append(line);
+            }
+            bufferedReader.close();
+        }
+        catch (IOException e) {
+
+        }
+
+        if (!text.toString().equals("1")) {
+            Intent intent = new Intent(this, InstallWelcome.class);
+            startActivity(intent);
+            finish();
+        }
+        text.setLength(0);
 
         webViewFood = (WebView) findViewById(R.id.webViewFood);
         webViewFood.setWebChromeClient(new WebChromeClient());

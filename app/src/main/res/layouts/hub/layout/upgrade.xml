@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/whiteBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/blackVIP"
+                android:layout_width="match_parent"
+                android:layout_height="280dp">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/black_vip_background"/>
+
+                <ImageView
+                    android:id="@+id/logoVIP"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/fira_vip_logo_with_image"/>
+
+
+                <ImageView
+                    android:id="@+id/goldenLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/logoVIP"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/golden_line"/>
+
+                <TextView
+                    android:id="@+id/featuresText1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/goldenLine1"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="Features"/>
+
+
+                <TextView
+                    android:id="@+id/featuresDescription1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/featuresText1"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:text="More than 5 favorite apps folders\nAccess to all genres in music\nAccess to all the settings in parrot"/>
+
+                <TextView
+                    android:id="@+id/moreButtonVIP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/featuresDescription1"
+                    android:textColor="@color/yellowVIP"
+                    android:textSize="20sp"
+                    android:text="More"
+                    android:onClick="MoreVIP"/>
+
+                <ImageView
+                    android:id="@+id/goldenLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/moreButtonVIP"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/golden_line"/>
+
+                <ImageView
+                    android:id="@+id/buyNowVIP"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/goldenLine2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/green_round_button"
+                    android:onClick="buyVIP"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/buyNowVIP"
+                    android:layout_alignRight="@id/buyNowVIP"
+                    android:layout_alignLeft="@id/buyNowVIP"
+                    android:layout_alignBottom="@id/buyNowVIP"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:text="@string/buy_now_5"
+                    android:onClick="buyVIP" />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/grayVIP"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_below="@id/blackVIP">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gray_pro_background"/>
+
+                <ImageView
+                    android:id="@+id/logoPRO"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/parrot_pro"/>
+
+
+                <ImageView
+                    android:id="@+id/grayLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/logoPRO"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/blue_line"/>
+
+                <TextView
+                    android:id="@+id/featuresText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/grayLine1"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="Features"/>
+
+
+                <TextView
+                    android:id="@+id/featuresDescription2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/featuresText2"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:text="More than 5 favorite apps folders\nAccess to all genres in music\nAccess to all the settings in parrot"/>
+
+                <TextView
+                    android:id="@+id/moreButtonPRO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/featuresDescription2"
+                    android:textColor="@color/bluePRO"
+                    android:textSize="20sp"
+                    android:text="More"
+                    android:onClick="morePRO"/>
+
+                <ImageView
+                    android:id="@+id/grayLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/moreButtonPRO"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/blue_line"/>
+
+                <ImageView
+                    android:id="@+id/buyNowPRO"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/grayLine2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/green_round_button"
+                    android:onClick="buyPRO"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/buyNowPRO"
+                    android:layout_alignRight="@id/buyNowPRO"
+                    android:layout_alignLeft="@id/buyNowPRO"
+                    android:layout_alignBottom="@id/buyNowPRO"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:text="@string/buy_now_1"
+                    android:onClick="buyPRO" />
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

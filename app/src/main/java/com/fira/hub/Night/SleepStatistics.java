@@ -1,14 +1,17 @@
 package com.fira.hub.Night;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Environment;
 import android.renderscript.Sampler;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.fira.hub.Install.InstallWelcome;
 import com.fira.hub.R;
 
 import java.io.BufferedReader;
@@ -25,9 +28,10 @@ import java.util.Calendar;
 
 public class SleepStatistics extends Activity {
 
-    String tempFolder = "Fira/Parrot/temp/";
-    String personalInformationFolder = "Fira/Parrot/PersonalInformation/";
-    String favoriteAppsGeneral = "Fira/Parrot/FavoriteApps/General/";
+    String tempFolder = "Fira/HUB/temp/";
+    String tempFolderParrot = "Fira/Parrot/temp/";
+    String personalInformationFolder = "Fira/HUB/PersonalInformation/";
+    String favoriteAppsGeneral = "Fira/HUB/FavoriteApps/General/";
 
     String SavedHour = "";
     String SavedMinute = "";
@@ -51,10 +55,34 @@ public class SleepStatistics extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sleep_statistics);
+
+        file = new File(Environment.getExternalStorageDirectory(),tempFolder + "Installed.txt");
+        text = new StringBuilder();
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+            String line;
+
+            while ((line = bufferedReader.readLine()) != null) {
+                text.append(line);
+            }
+            bufferedReader.close();
+        }
+        catch (IOException e) {
+
+        }
+
+        if (!text.toString().equals("1")) {
+            Intent intent = new Intent(this, InstallWelcome.class);
+            startActivity(intent);
+            finish();
+        }
+        text.setLength(0);
+
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         try{
-            File fileDay = new File(Environment.getExternalStorageDirectory(),tempFolder + "NightSleepOn.txt");
+            File fileDay = new File(Environment.getExternalStorageDirectory(),tempFolderParrot + "NightSleepOn.txt");
             fileDay.delete();
             BufferedWriter writerDay = new BufferedWriter(new FileWriter(fileDay,true));
             writerDay.write("0");
@@ -62,14 +90,14 @@ public class SleepStatistics extends Activity {
         }
         catch (IOException e) {
             e.printStackTrace();
-            Toast.makeText(this, "Failed to start timer", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Failed to stop timer", Toast.LENGTH_LONG).show();
         }
 
         calculateTime();
     }
 
     private void calculateTime() {
-        file = new File(Environment.getExternalStorageDirectory(),tempFolder + "NightSleepHour.txt");
+        file = new File(Environment.getExternalStorageDirectory(),tempFolderParrot + "NightSleepHour.txt");
         text = new StringBuilder();
         try {
             brBio = new BufferedReader(new FileReader(file));
@@ -88,7 +116,7 @@ public class SleepStatistics extends Activity {
 
 
 
-        file = new File(Environment.getExternalStorageDirectory(),tempFolder + "NightSleepMinute.txt");
+        file = new File(Environment.getExternalStorageDirectory(),tempFolderParrot + "NightSleepMinute.txt");
         text = new StringBuilder();
         try {
             brBio = new BufferedReader(new FileReader(file));
@@ -106,7 +134,7 @@ public class SleepStatistics extends Activity {
         text.setLength(0);
 
 
-        file = new File(Environment.getExternalStorageDirectory(),tempFolder + "NightSleepDay.txt");
+        file = new File(Environment.getExternalStorageDirectory(),tempFolderParrot + "NightSleepDay.txt");
         text = new StringBuilder();
         try {
             brBio = new BufferedReader(new FileReader(file));
@@ -157,6 +185,8 @@ public class SleepStatistics extends Activity {
             hoursTillTwelve = 24-currentHour;
             hoursAfterTwelve = currentHour;
             hoursSlept = hoursTillTwelve + hoursAfterTwelve;
+        }else if (savedHour < currentHour && savedHour + 1 == currentHour) {
+            hoursSlept = currentHour - savedHour - 1;
         }else if (savedHour < currentHour) {
             hoursSlept = currentHour - savedHour;
         }
@@ -194,5 +224,9 @@ public class SleepStatistics extends Activity {
     @Override
     public void onBackPressed() {
 
+    }
+
+    public void Done(View view) {
+        finish();
     }
 }

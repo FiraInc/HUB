@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_installation"/>
+
+
+    <ImageView
+        android:id="@+id/centerInstall"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/installExtensionButton"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="120dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/green_round_button"
+        android:onClick="InstallParrotButton"/>
+
+    <TextView
+        android:id="@+id/installExtension"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/installExtensionButton"
+        android:layout_alignBottom="@id/installExtensionButton"
+        android:layout_alignLeft="@id/installExtensionButton"
+        android:layout_alignRight="@id/installExtensionButton"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:text="@string/install"
+        android:onClick="InstallParrotButton"/>
+
+
+    <ImageView
+        android:id="@+id/skipExtensionButton"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/green_round_button"
+        android:onClick="skipParrot"/>
+
+    <TextView
+        android:id="@+id/skipButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/skipExtensionButton"
+        android:layout_alignBottom="@id/skipExtensionButton"
+        android:layout_alignLeft="@id/skipExtensionButton"
+        android:layout_alignRight="@id/skipExtensionButton"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:text="@string/skip"
+        android:onClick="skipParrot"/>
+
+    <TextView
+        android:id="@+id/extensionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="69dp"
+        android:textColor="@android:color/white"
+        android:textSize="60sp"
+        android:text="@string/install_parrot"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/recommendYou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:text="@string/we_recommend_you_to_install_parrot_launcher"
+        android:layout_below="@+id/extensionTitle"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

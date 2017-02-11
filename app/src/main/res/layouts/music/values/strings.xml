@@ -4,4 +4,26 @@
     <string name="its_friday">It\'s friday</string>
     <string name="party_and_chill">Party playlists and chill playlists</string>
     <string name="its_saturday">It\'s saturday</string>
+    <string name="save">Save</string>
+    <string name="notes">Notes</string>
+    <string name="load">Load</string>
+    <string name="welcome">Welcome</string>
+    <string name="get_started">Get Started</string>
+    <string name="skip">Skip</string>
+    <string name="permissions">Permissions</string>
+    <string name="allow">Allow</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="install">Install</string>
+    <string name="done">Done</string>
+    <string name="install_parrot">Install Parrot</string>
+    <string name="we_recommend_you_to_install_parrot_launcher">We recommend you to install Parrot Launcher!</string>
+    <string name="hello">Hello!</string>
+    <string name="close">Close</string>
+    <string name="launch_hub">Launch HUB</string>
+    <string name="settings">Settings</string>
+    <string name="report_bug">Report bug</string>
+    <string name="buy_now_5">Buy now (5$)</string>
+    <string name="buy_now_1">Buy now (1$)</string>
 </resources>

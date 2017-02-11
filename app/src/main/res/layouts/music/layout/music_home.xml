@@ -45,7 +45,8 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:layout_alignParentRight="true"
-        android:src="@drawable/shazam_logo"/>
+        android:src="@drawable/shazam_logo"
+        android:onClick="shazamButton"/>
 
 
 
@@ -63,7 +64,8 @@
                 android:id="@+id/topImage"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:background="@drawable/shazam_header"/>
+                android:background="@drawable/fira_vip_banner"
+                android:onClick="upgrade"/>
 
 
 
@@ -201,7 +203,7 @@
                         android:layout_height="30dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
-                        android:onClick="sleepGenre"
+                        android:onClick="CurrentGenreMore"
                         android:src="@drawable/more_button"/>
 
                 </RelativeLayout>

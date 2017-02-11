@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_installation"/>
+
+    <TextView
+        android:id="@+id/extensionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:textSize="60sp"
+        android:text="@string/welcome"/>
+
+
+    <ImageView
+        android:id="@+id/centerInstall"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="1dp" />
+
+    <ImageView
+    android:id="@+id/installExtensionButton"
+    android:layout_width="300dp"
+    android:layout_height="40dp"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="70dp"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/green_round_button"
+    android:onClick="start"/>
+
+    <TextView
+        android:id="@+id/installExtension"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/installExtensionButton"
+        android:layout_alignBottom="@id/installExtensionButton"
+        android:layout_alignLeft="@id/installExtensionButton"
+        android:layout_alignRight="@id/installExtensionButton"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:text="@string/get_started"
+        android:onClick="start"/>
+
+</RelativeLayout>

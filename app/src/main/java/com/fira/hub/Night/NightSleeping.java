@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.fira.hub.Install.InstallWelcome;
 import com.fira.hub.R;
 
 import java.io.BufferedReader;
@@ -38,9 +39,10 @@ public class NightSleeping extends Activity {
     File file;
     StringBuilder text;
 
-    String tempFolder = "Fira/Parrot/temp/";
-    String personalInformationFolder = "Fira/Parrot/PersonalInformation/";
-    String favoriteAppsGeneral = "Fira/Parrot/FavoriteApps/General/";
+    String tempFolder = "Fira/HUB/temp/";
+    String tempFolderParrot = "Fira/Parrot/temp/";
+    String personalInformationFolder = "Fira/HUB/PersonalInformation/";
+    String favoriteAppsGeneral = "Fira/HUB/FavoriteApps/General/";
 
     Handler handler;
 
@@ -51,6 +53,30 @@ public class NightSleeping extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.night_sleeping);
+
+        file = new File(Environment.getExternalStorageDirectory(),tempFolder + "Installed.txt");
+        text = new StringBuilder();
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+            String line;
+
+            while ((line = bufferedReader.readLine()) != null) {
+                text.append(line);
+            }
+            bufferedReader.close();
+        }
+        catch (IOException e) {
+
+        }
+
+        if (!text.toString().equals("1")) {
+            Intent intent = new Intent(this, InstallWelcome.class);
+            startActivity(intent);
+            finish();
+        }
+        text.setLength(0);
+
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         yellow = (ImageView) findViewById(R.id.yellow);
@@ -70,7 +96,7 @@ public class NightSleeping extends Activity {
         int currentDay = c.get(Calendar.DAY_OF_YEAR);
 
         try{
-            File fileHour = new File(Environment.getExternalStorageDirectory(),tempFolder + "NightSleepHour.txt");
+            File fileHour = new File(Environment.getExternalStorageDirectory(),tempFolderParrot + "NightSleepHour.txt");
             fileHour.delete();
             BufferedWriter writerHour = new BufferedWriter(new FileWriter(fileHour,true));
             writerHour.write(String.valueOf(currentHour));
@@ -82,7 +108,7 @@ public class NightSleeping extends Activity {
         }
 
         try{
-            File fileMinute = new File(Environment.getExternalStorageDirectory(),tempFolder + "NightSleepMinute.txt");
+            File fileMinute = new File(Environment.getExternalStorageDirectory(),tempFolderParrot + "NightSleepMinute.txt");
             fileMinute.delete();
             BufferedWriter writerMinute = new BufferedWriter(new FileWriter(fileMinute,true));
             writerMinute.write(String.valueOf(currentMinute));
@@ -94,7 +120,7 @@ public class NightSleeping extends Activity {
         }
 
         try{
-            File fileDay = new File(Environment.getExternalStorageDirectory(),tempFolder + "NightSleepDay.txt");
+            File fileDay = new File(Environment.getExternalStorageDirectory(),tempFolderParrot + "NightSleepDay.txt");
             fileDay.delete();
             BufferedWriter writerDay = new BufferedWriter(new FileWriter(fileDay,true));
             writerDay.write(String.valueOf(currentDay));
@@ -106,7 +132,7 @@ public class NightSleeping extends Activity {
         }
 
         try{
-            File fileDay = new File(Environment.getExternalStorageDirectory(),tempFolder + "NightSleepOn.txt");
+            File fileDay = new File(Environment.getExternalStorageDirectory(),tempFolderParrot + "NightSleepOn.txt");
             fileDay.delete();
             BufferedWriter writerDay = new BufferedWriter(new FileWriter(fileDay,true));
             writerDay.write("1");
@@ -120,8 +146,9 @@ public class NightSleeping extends Activity {
 
     @Override
     protected void onResume() {
-        NightSleepingActive = true;
         super.onResume();
+        NightSleepingActive = true;
+        fadeIn();
     }
 
     @Override
@@ -134,7 +161,7 @@ public class NightSleeping extends Activity {
         if (NightSleepingActive) {
             Calendar c = Calendar.getInstance();
             int currentHour = c.get(Calendar.HOUR_OF_DAY);
-            if (currentHour >= 5 && currentHour <= 18){
+            if (currentHour >= 5 && currentHour <= 17){
                 daytime = true;
                 try {
                     Animation startAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in_animation);
@@ -155,14 +182,18 @@ public class NightSleeping extends Activity {
     }
 
     public void wakeUpButton(View view) {
+        File fileDay = new File(Environment.getExternalStorageDirectory(),tempFolderParrot + "NightSleepOn.txt");
+        fileDay.delete();
         if (daytime) {
             Intent intent = new Intent(this, SleepStatistics.class);
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(NightSleeping.this,findViewById(R.id.yellow), "transitionStatistics");
                 startActivity(intent, optionsCompat.toBundle());
+                finish();
             }else {
                 startActivity(intent);
+                finish();
             }
         }else {
             super.onBackPressed();

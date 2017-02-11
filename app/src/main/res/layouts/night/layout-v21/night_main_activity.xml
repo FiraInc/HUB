@@ -79,16 +79,145 @@
                 android:layout_below="@id/headerNight"
                 android:background="@drawable/smallbox_night"/>
 
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/box1Night"
+                android:layout_alignBottom="@id/box1Night"
+                android:layout_alignLeft="@id/box1Night"
+                android:gravity="center"
+                android:layout_alignRight="@id/box1Night">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/flashlightButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/flashlight_unlit"
+                        android:onClick="flashlightButton"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/volumeButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/volume_on"
+                        android:onClick="volumeToggle"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/lightbulb"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/smart_lights_button"
+                        android:onClick="smartLightsButton"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
             <ImageView
-                android:id="@+id/box2Night"
+                android:id="@+id/NotesBox"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_centerHorizontal="true"
+                android:layout_height="170dp"
+                android:background="@drawable/bigbox_night"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
                 android:layout_below="@id/box1Night"
-                android:background="@drawable/bigbox_night"/>
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/NotesHome2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/HeaderNotes"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_alignBottom="@id/NotesBox"
+                android:layout_alignLeft="@id/NotesBox"
+                android:layout_alignRight="@id/NotesBox"
+                android:gravity="center"
+                android:background="#00000000"
+                android:textColor="@android:color/white"
+                />
+
+            <ImageView
+                android:id="@+id/HeaderNotes"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignTop="@id/NotesBox"
+                android:layout_alignRight="@id/NotesBox"
+                android:layout_alignLeft="@id/NotesBox"
+                android:background="@drawable/little_header_box1_dark"/>
+
+            <TextView
+                android:id="@+id/saveButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/HeaderNotes"
+                android:layout_alignLeft="@id/HeaderNotes"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@android:color/holo_green_light"
+                android:text="@string/save"
+                android:onClick="saveNotes"/>
+
+            <TextView
+                android:id="@+id/QuickNotesText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/HeaderNotes"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textColor="@android:color/darker_gray"
+                android:text="@string/notes"
+                android:onClick="clearNotes"/>
+
+            <TextView
+                android:id="@+id/loadButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/HeaderNotes"
+                android:layout_alignRight="@id/HeaderNotes"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/holo_orange_light"
+                android:text="@string/load"
+                android:onClick="loadNotes"/>
 
 
 

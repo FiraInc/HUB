@@ -82,6 +82,7 @@
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:id="@+id/popGenre"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/pop_genre"
@@ -89,6 +90,7 @@
                         android:layout_weight="1"/>
 
                     <ImageView
+                        android:id="@+id/moodGenre"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/mood_genre"
@@ -96,6 +98,7 @@
                         android:layout_weight="1"/>
 
                     <ImageView
+                        android:id="@+id/focusGenre"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/focus_genre"
@@ -115,6 +118,7 @@
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:id="@+id/partyGenre"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/party_genre"
@@ -122,6 +126,7 @@
                         android:layout_weight="1"/>
 
                     <ImageView
+                        android:id="@+id/chillGenre"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/chill_genre"
@@ -129,6 +134,7 @@
                         android:layout_weight="1"/>
 
                     <ImageView
+                        android:id="@+id/workoutGenre"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/workout_genre"
@@ -148,6 +154,7 @@
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:id="@+id/sleepGenre"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/sleep_genre"
@@ -155,6 +162,7 @@
                         android:layout_weight="1"/>
 
                     <ImageView
+                        android:id="@+id/romanceGenre"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/romance_genre"
@@ -162,6 +170,7 @@
                         android:layout_weight="1"/>
 
                     <ImageView
+                        android:id="@+id/gamingGenre"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/gaming_genre"

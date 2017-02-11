@@ -5,11 +5,11 @@ android {
     buildToolsVersion "24.0.2"
 
     defaultConfig {
-        applicationId "com.fira.utility"
+        applicationId "com.fira.HUB"
         minSdkVersion 19
         targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "BETA 1.0.2"
     }
     buildTypes {
         release {
@@ -23,9 +23,10 @@ android {
             res.srcDirs = [
                     'src/main/res/layouts/music',
                     'src/main/res/layouts/food',
-                    'src/main/res/layouts/utility',
+                    'src/main/res/layouts/hub',
                     'src/main/res/layouts/night',
                     'src/main/res/layouts/news',
+                    'src/main/res/layouts/install',
                     'src/main/res/layouts',
                     'src/main/res'
             ]

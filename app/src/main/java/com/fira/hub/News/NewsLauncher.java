@@ -7,6 +7,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.util.Log;
 
+import com.fira.hub.Install.InstallWelcome;
 import com.fira.hub.R;
 
 import java.io.BufferedReader;
@@ -31,6 +32,30 @@ public class NewsLauncher extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.news_launcher);
+
+        file = new File(Environment.getExternalStorageDirectory(),tempFolder + "Installed.txt");
+        text = new StringBuilder();
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+            String line;
+
+            while ((line = bufferedReader.readLine()) != null) {
+                text.append(line);
+            }
+            bufferedReader.close();
+        }
+        catch (IOException e) {
+
+        }
+
+        if (!text.toString().equals("1")) {
+            Intent intent = new Intent(this, InstallWelcome.class);
+            startActivity(intent);
+            finish();
+        }
+        text.setLength(0);
+
+
 
 
         startHandler();
