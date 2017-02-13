@@ -54,4 +54,7 @@
     <string name="chill_title">Chill</string>
     <string name="saved">Saved</string>
 
+    <string-array name="pageLinks">
+    </string-array>
+
 </resources>

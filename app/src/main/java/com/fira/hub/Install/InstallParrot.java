@@ -52,6 +52,7 @@ public class InstallParrot extends Activity {
             public void onClick(DialogInterface dialog, int which) {
                 switch (which){
                     case DialogInterface.BUTTON_POSITIVE:
+                        dialog.dismiss();
                         startHello();
                         break;
 
@@ -68,7 +69,7 @@ public class InstallParrot extends Activity {
     }
 
     private void startHello() {
-        Intent intent = new Intent(this, Hello.class);
+        Intent intent = new Intent(this, AskForPermissions.class);
         startActivity(intent);
         finish();
     }

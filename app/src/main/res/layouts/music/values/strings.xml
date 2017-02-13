@@ -26,4 +26,14 @@
     <string name="report_bug">Report bug</string>
     <string name="buy_now_5">Buy now (5$)</string>
     <string name="buy_now_1">Buy now (1$)</string>
+    <string name="your_newspapers">Your newspapers</string>
+    <string name="newspapers_you_saved">Newspapers you saved</string>
+    <string name="saved_articles">Saved articles</string>
+    <string name="articles_you_saved">Articles you saved</string>
+    <string name="subscribe">SUBSCRIBE</string>
+    <string name="popular_newspapers">Popular newspapers</string>
+    <string name="popular_newspapers_around_the_world">Popular newspapers around the world</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
 </resources>

@@ -330,6 +330,14 @@ public class MusicHome extends Activity {
     }
     @Override
     public void onBackPressed() {
+        goBack();
+    }
+
+    public void backGo(View view) {
+        goBack();
+    }
+
+    public void goBack () {
         if (doubleback) {
             super.onBackPressed();
         }else {

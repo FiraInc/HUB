@@ -63,7 +63,8 @@
                 android:id="@+id/topImage"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:background="@drawable/shazam_header"/>
+                android:background="@drawable/fira_vip_banner"
+                android:onClick="upgrade"/>
 
 
 
@@ -97,7 +98,7 @@
                         android:layout_marginLeft="10dp"
                         android:textSize="20sp"
                         android:textColor="@android:color/white"
-                        android:text="Your newspapers"/>
+                        android:text="@string/your_newspapers"/>
 
                     <TextView
                         android:id="@+id/popularTextDescription"
@@ -107,7 +108,7 @@
                         android:layout_marginLeft="10dp"
                         android:textSize="15sp"
                         android:textColor="@color/musicTextColor"
-                        android:text="Saved newspapers"/>
+                        android:text="@string/newspapers_you_saved"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -115,7 +116,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/more_button"
-                        android:onClick="PopularMusicApps"/>
+                        android:onClick="moreSaved"/>
 
                 </RelativeLayout>
 
@@ -127,27 +128,27 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/firstApp"
+                        android:id="@+id/rowButton11"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/spotify_with_title"
-                        android:onClick="spotifyButton"
+                        android:onClick="boxClick1"
+                        android:src="@drawable/loading_news"
                         android:layout_weight="1"/>
 
                     <ImageView
-                        android:id="@+id/secondApp"
+                        android:id="@+id/rowButton12"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/soundcloud_with_title"
-                        android:onClick="soundcloudButton"
+                        android:onClick="boxClick2"
+                        android:src="@drawable/loading_news"
                         android:layout_weight="1"/>
 
                     <ImageView
-                        android:id="@+id/thirdApp"
+                        android:id="@+id/rowButton13"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/play_music_with_title"
-                        android:onClick="playmusicButton"
+                        android:onClick="boxClick3"
+                        android:src="@drawable/loading_news"
                         android:layout_weight="1"/>
 
 
@@ -183,7 +184,7 @@
                         android:layout_marginLeft="10dp"
                         android:textSize="20sp"
                         android:textColor="@android:color/white"
-                        android:text="@string/sleep_playlists"/>
+                        android:text="@string/saved_articles"/>
 
                     <TextView
                         android:id="@+id/popularPlaylistsTextDescription"
@@ -193,7 +194,7 @@
                         android:layout_marginLeft="10dp"
                         android:textSize="15sp"
                         android:textColor="@color/musicTextColor"
-                        android:text="@string/playlists_for_sleep"/>
+                        android:text="@string/articles_you_saved"/>
 
                     <ImageView
                         android:id="@+id/moreButtonTimePlaylists"
@@ -201,7 +202,7 @@
                         android:layout_height="30dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
-                        android:onClick="sleepGenre"
+                        android:onClick="CurrentGenreMore"
                         android:src="@drawable/more_button"/>
 
                 </RelativeLayout>
@@ -214,28 +215,28 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/SecondFirstApp"
+                        android:id="@+id/rowButton21"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/tuck_me_in"
-                        android:onClick="tuckMeIn"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:onClick="boxClickSaves1"
+                        android:src="@drawable/loading_news"/>
 
                     <ImageView
-                        android:id="@+id/SecondSecondApp"
+                        android:id="@+id/rowButton22"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/peaceful_piano"
-                        android:onClick="peacefulPiano"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:onClick="boxClickSaves2"
+                        android:src="@drawable/loading_news"/>
 
                     <ImageView
-                        android:id="@+id/SecondThirdApp"
+                        android:id="@+id/rowButton23"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/late_night_drinks"
-                        android:onClick="lateNightDrinks"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:onClick="boxClickSaves3"
+                        android:src="@drawable/loading_news"/>
 
 
                 </LinearLayout>
@@ -273,7 +274,7 @@
                         android:layout_marginLeft="10dp"
                         android:textSize="20sp"
                         android:textColor="@android:color/white"
-                        android:text="@string/popular_genres"/>
+                        android:text="@string/popular_newspapers"/>
 
                     <TextView
                         android:id="@+id/popularGenresTextDescription"
@@ -283,7 +284,7 @@
                         android:layout_marginLeft="10dp"
                         android:textSize="15sp"
                         android:textColor="@color/musicTextColor"
-                        android:text="@string/genres"/>
+                        android:text="@string/popular_newspapers_around_the_world"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -291,7 +292,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/more_button"
-                        android:onClick="Genres"/>
+                        android:onClick="morePopular"/>
 
                 </RelativeLayout>
 
@@ -303,28 +304,28 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/ThirdFirstApp"
+                        android:id="@+id/rowButton31"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/pop_genre"
-                        android:onClick="popGenre"
-                        android:layout_weight="1"/>
+                        android:onClick="popularPaper1"
+                        android:layout_weight="1"
+                        android:src="@drawable/loading_news"/>
 
                     <ImageView
-                        android:id="@+id/ThirdSecondApp"
+                        android:id="@+id/rowButton32"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/mood_genre"
-                        android:onClick="moodGenre"
-                        android:layout_weight="1"/>
+                        android:onClick="popularPaper2"
+                        android:layout_weight="1"
+                        android:src="@drawable/loading_news"/>
 
                     <ImageView
-                        android:id="@+id/ThirdThirdApp"
+                        android:id="@+id/rowButton33"
                         android:layout_width="110dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/focus_genre"
-                        android:onClick="focusGenre"
-                        android:layout_weight="1"/>
+                        android:onClick="popularPaper3"
+                        android:layout_weight="1"
+                        android:src="@drawable/loading_news"/>
 
 
                 </LinearLayout>
@@ -336,4 +337,23 @@
 
         </RelativeLayout>
     </ScrollView>
+
+
+    <ImageView
+        android:id="@+id/splashScreenBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"/>
+
+    <ImageView
+        android:id="@+id/splashScreenLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:src="@drawable/fira_news_logo_small"/>
+
+
 </RelativeLayout>

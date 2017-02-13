@@ -7,7 +7,6 @@
     <WebView
         android:id="@+id/newsWebView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/shazam_header"/>
+        android:layout_height="match_parent" />
 
 </RelativeLayout>

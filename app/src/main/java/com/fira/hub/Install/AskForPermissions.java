@@ -38,7 +38,7 @@ public class AskForPermissions extends Activity {
     }
 
     public void allow(View view) {
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 1);
     }
 
     @Override

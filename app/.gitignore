@@ -1,1 +1,4 @@
 /build
+.iws
+workspace.xml
+tasks.xml

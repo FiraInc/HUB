@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -20,89 +20,62 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-        <activity android:name="com.fira.hub.Music.MusicHome">
+        <activity android:name=".Music.MusicHome">
             <intent-filter>
-                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND" />
             </intent-filter>
-
         </activity>
-
-
-        <activity android:name="com.fira.hub.Music.MusicApps"/>
-        <activity android:name="com.fira.hub.Music.Genres"/>
-
-
-
-
-        <activity android:name="com.fira.hub.Music.GenreSleep"/>
-        <activity android:name="com.fira.hub.Music.GenreFocus"/>
-        <activity android:name="com.fira.hub.Music.GenrePop"/>
-
-
-
-
-        <activity android:name="com.fira.hub.Food.FoodStartupActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.SEND"/>
-        </intent-filter>
+        <activity android:name=".Music.MusicApps" />
+        <activity android:name=".Music.Genres" />
+        <activity android:name=".Music.GenreSleep" />
+        <activity android:name=".Music.GenreFocus" />
+        <activity android:name=".Music.GenrePop" />
+        <activity android:name=".Food.FoodStartupActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+            </intent-filter>
         </activity>
-
-        <activity android:name="com.fira.hub.Music.GenreMood"/>
-        <activity android:name=".Music.GenreParty"/>
-        <activity android:name=".Music.GenreChill"/>
-        <activity android:name=".Music.GenreRomance"/>
-        <activity android:name=".Music.GenreWorkout"/>
-        <activity android:name=".Music.GenreGaming"/>
-
-
+        <activity android:name=".Music.GenreMood" />
+        <activity android:name=".Music.GenreParty" />
+        <activity android:name=".Music.GenreChill" />
+        <activity android:name=".Music.GenreRomance" />
+        <activity android:name=".Music.GenreWorkout" />
+        <activity android:name=".Music.GenreGaming" />
         <activity
-            android:name="com.fira.hub.Night.NightMainActivity"
+            android:name=".Night.NightMainActivity"
             android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
-                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".Night.NightSleeping"/>
-
+        <activity android:name=".Night.NightSleeping" />
         <activity android:name=".Night.SleepStatistics">
             <intent-filter>
-                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND" />
             </intent-filter>
         </activity>
-
         <activity android:name=".News.NewsLauncher">
             <intent-filter>
-                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND" />
             </intent-filter>
         </activity>
+        <activity android:name=".News.NewsHome" />
+        <activity android:name=".News.NewsHomeExperimental" />
+        <activity android:name=".News.newsWebLoader" />
+        <activity android:name=".News.savedNewsPapers" />
+        <activity android:name=".News.popularNewsPapers"/>
 
-        <activity android:name=".News.NewsHome"/>
-
-        <activity android:name=".News.NewsHomeExperimental"/>
-
-        <activity android:name=".Install.InstallWelcome"/>
-
-        <activity android:name=".Install.AskForPermissions"/>
-
-        <activity android:name=".Install.Hello"/>
-
-        <activity android:name=".Install.InstallParrot"/>
-
-        <activity android:name=".HUB.Information"/>
-
-        <activity android:name=".HUB.Connections"/>
-
+        <activity android:name=".Install.InstallWelcome" />
+        <activity android:name=".Install.AskForPermissions" />
+        <activity android:name=".Install.Hello" />
+        <activity android:name=".Install.InstallParrot" />
+        <activity android:name=".HUB.Information" />
+        <activity android:name=".HUB.Connections" />
         <activity android:name=".HUB.Upgrade">
             <intent-filter>
-                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND" />
             </intent-filter>
         </activity>
-
-
-
     </application>
 
 </manifest>
